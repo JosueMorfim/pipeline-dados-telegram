@@ -19,12 +19,14 @@ job = Job(glueContext)
 job.init(args['JOB_NAME'], args)
 
 # Script generated for node AWS Glue Data Catalog
-AWSGlueDataCatalog_node1711462857829 = glueContext.create_dynamic_frame.from_catalog(database="default", table_name="telegram", transformation_ctx="AWSGlueDataCatalog_node1711462857829")
+# substituir os dados pelos verdadeiros em (database="default", table_name="telegram", transformation_ctx="AWSGlueDataCatalog_node111111111111") .
+AWSGlueDataCatalog_node1711462857829 = glueContext.create_dynamic_frame.from_catalog(database="default", table_name="telegram", transformation_ctx="AWSGlueDataCatalog_node111111111111")
 
 # Script generated for node SQL Query
 SqlQuery0 = '''
 MSCK REPAIR TABLE telegram;
 '''
-SQLQuery_node1711462894912 = sparkSqlQuery(glueContext, query = SqlQuery0, mapping = {"myDataSource":AWSGlueDataCatalog_node171116288888}, transformation_ctx = "SQLQuery_node1711162888888") # substituir os dados pelos verdadeiros.
+# substituir os dados pelos verdadeiros em {"myDataSource":AWSGlueDataCatalog_node1111111111111}, transformation_ctx = "SQLQuery_node11111111111") .
+SQLQuery_node1711462894912 = sparkSqlQuery(glueContext, query = SqlQuery0, mapping = {"myDataSource":AWSGlueDataCatalog_node1111111111111}, transformation_ctx = "SQLQuery_node11111111111") 
 
 job.commit()
